@@ -16,55 +16,71 @@ struct Inspiracion: View {
                 TabView {
                     RectangleView(imageName: "img1")
                         .tag(0)
-
                     RectangleView(imageName: "img2")
                         .tag(1)
-
                     RectangleView(imageName: "img3")
                         .tag(2)
-                }
+                    RectangleView(imageName: "img4")
+                        .tag(3)
+                    RectangleView(imageName: "img5")
+                        .tag(4)
+                    RectangleView(imageName: "img6")
+                        .tag(5)
+                    RectangleView(imageName: "img7")
+                        .tag(6)
+                    RectangleView(imageName: "img8")
+                        .tag(7)
+                }.padding(10)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                .frame(height: 200)
+                .frame(height: 280)
                 
                 VStack {
                     NavigationLink(destination: SegundaVista()) {
                         HStack {
-                            Image(systemName: "1.square.fill")
+                            Image("agua")
+                                .resizable()
+                                .frame(width: 80, height: 80)
                                 .font(.system(size: 80))
-                                .foregroundColor(.blue)
-                            Text("Texto de la primera opción")
+                                .foregroundColor(.black)
+                            Text("¿Por qué es importante beber agua?")
                         }
                     }
                     
                     NavigationLink(destination: TerceraVista()) {
                         HStack {
-                            Image(systemName: "2.square.fill")
+                            Image("meditar")
+                                .resizable()
+                                .frame(width: 80, height: 80)
                                 .font(.system(size: 80))
                                 .foregroundColor(.blue)
-                            Text("Texto de la segunda opción")
+                            Text("Beneficios de la meditación               ")
                         }
                     }
                     
                     NavigationLink(destination: CuartaVista()) {
                         HStack {
-                            Image(systemName: "3.square.fill")
+                            Image("basura")
+                                .resizable()
+                                .frame(width: 80, height: 80)
                                 .font(.system(size: 80))
                                 .foregroundColor(.blue)
-                            Text("Texto de la tercera opción")
+                            Text("¿Qué tirar en cada contenedor?        ")
                         }
                     }
                     
                     NavigationLink(destination: QuintaVista()) {
                         HStack {
-                            Image(systemName: "4.square.fill")
+                            Image("huracan")
+                                .resizable()
+                                .frame(width: 80, height: 80)
                                 .font(.system(size: 80))
                                 .foregroundColor(.blue)
-                            Text("Texto de la cuarta opción")
+                            Text("Influencia del cambio climático en los huracanes  ")
                         }
                     }
                 }
             }
-            .navigationTitle("DISQUE INSPIRACIÓN")
+            .navigationTitle("Inspiración")
         }
     }
 }
@@ -99,44 +115,79 @@ struct DetalleView: View {
         .navigationTitle(imageName)
     }
 }
-//por si no la captas estas son las vistas de los cuadrados los cuales puedes cambiar por imagenes
+
 struct SegundaVista: View {
     var body: some View {
+        Text("¿Por qué es importante beber agua?")
+            .font(.largeTitle)
+            .padding(15)
+        Image("agua").resizable().frame(width: 400, height: 250)
+        Text("El agua proporciona minerales escenciales como el calcio, magnesio y el flúor, que sirven para fortalecer los huesos y dientes.").font(.title3)
+       Text("Las funcionalidades en nuestro cuerpo son múltiples, entre las más importantes se encuentran: la participación en el buen funcionamiento del cerebro y los nervios, permite el transporte de nutrientes a las células, colabora en el proceso digestivo, en la respiración y circulación sanguínea...").font(.title3)
         VStack{
-            Link(destination: URL(string: "https://www.shutterstock.com/es/search/caca")!){
+            Link(destination: URL(string: "https://acortar.link/Na70NX")!){
                 HStack{
                     Image(systemName: "link")
-                    Text("tu cagada de app")
+                    Text("Seguir leyendo...")
                 }
             }
         }
-        Text("Aqui escribes tu noticia, reina")
-            .font(.largeTitle)
-            .padding()
     }
 }
 //haces lo mismo n cantidad de veces y n me refiero a la cantidad que quieras
 struct TerceraVista: View {
     var body: some View {
-        Text("y aqui tambien")
+        Text("Beneficios de la meditación")
             .font(.largeTitle)
-            .padding()
+            .padding(15)
+        Image("meditar").resizable().frame(width: 400, height: 250)
+       Text("La meditación puede darte una sensación de calma, paz y equilibrio que puede beneficiar tanto tu bienestar emocional como tu salud general. También puedes usarla para relajarte y lidiar con el estrés al enfocar tu atención en algo que te calme. La meditación puede ayudarte a aprender a mantenerte centrado y a conservar la paz interior.").font(.title3)
+        VStack{
+            Link(destination: URL(string: "https://acortar.link/Hhy41A")!){
+                HStack{
+                    Image(systemName: "link")
+                    Text("Seguir leyendo...")
+                }
+            }
+        }
     }
 }
 
 struct CuartaVista: View {
     var body: some View {
-        Text("aqui igual")
+        Text("¿Qué tirar en cada contenedor")
             .font(.largeTitle)
-            .padding()
+            .padding(15)
+        Image("basura").resizable().frame(width: 400, height: 250)
+       Text("Dentro del contenedor amarillo, debemos depositar botellas y envases de plástico, envases metálicos y briks. El contenedor azul suele ser fácil de distinguir y de usar, ya que está destinado solo al papel y al cartón. Además del plástico y el papel/catón existen otros muchos tipos de materiales que deben depositarse en sus correspondientes contenedores: vidrio en el contenedor verde, residuos orgánicos en el contenedor marrón, restos no reciclables en el contenedor gris").font(.title3)
+        VStack{
+            Link(destination: URL(string: "https://acortar.link/wGJoxq")!){
+                HStack{
+                    Image(systemName: "link")
+                    Text("Seguir leyendo...")
+                }
+            }
+        }
     }
 }
 
 struct QuintaVista: View {
     var body: some View {
-        Text("te repito que aqui tambien no te me vayas a confundir ")
+        Text("Así afecta el cambio climático a la formación de huracanes")
             .font(.largeTitle)
             .padding()
+        
+        Image("huracan").resizable().frame(width: 400, height: 250)
+        
+        Text("Phil Klotzbach, investigador de huracanes en la Universidad Estatal de Colorado, explica que la mayor preocupación respecto al cambio climático radica en el aumento del nivel del mar y el aumento de las precipitaciones. A nivel mundial, la temperatura media de la superficie oceánica ha aumentado al menos 1ºC desde finales del siglo XIX.").font(.title3)
+        VStack{
+            Link(destination: URL(string: "https://acortar.link/QBchoh")!){
+                HStack{
+                    Image(systemName: "link")
+                    Text("Seguir leyendo...")
+                }
+            }
+        }
     }
 }
 
